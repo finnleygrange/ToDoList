@@ -1,5 +1,11 @@
+import DateNow from "./components/DateNow";
+
 function App() {
-  return "Hello World!";
+  return (
+    <>
+      <DateNow></DateNow>
+    </>
+  );
 }
 
 export default App;
