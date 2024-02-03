@@ -20,12 +20,19 @@ function App() {
     localStorage.setItem("items", JSON.stringify(updatedItems));
   }
 
+  function RemoveItemFromList(index) {
+    const updatedItems = [...items];
+    updatedItems.splice(index, 1);
+    setItems(updatedItems);
+    localStorage.setItem("items", JSON.stringify(updatedItems));
+  }
+
   return (
     <>
       <div className="container d-flex justify-content-center p-5 flex-column w-50 bg-light">
         <DateNow />
         <AddItemForm addItemToList={AddItemToList} />
-        <ItemList items={items} />
+        <ItemList items={items} removeItem={RemoveItemFromList} />
       </div>
     </>
   );
