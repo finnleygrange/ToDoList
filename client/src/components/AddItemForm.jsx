@@ -21,14 +21,17 @@ function AddItemForm({ addItemToList }) {
 
   return (
     <>
-      <form onSubmit={addItem}>
+      <form className="add-item-form input-group mt-5" onSubmit={addItem}>
         <input
+          className="form-control"
           type="text"
           value={item}
           onChange={handleInputChange}
           placeholder="Add new item"
         />
-        <button type="submit">Submit</button>
+        <button className="btn btn-outline-primary" type="submit">
+          <i class="fa-solid fa-plus"></i>
+        </button>
       </form>
     </>
   );

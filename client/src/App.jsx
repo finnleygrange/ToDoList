@@ -22,9 +22,11 @@ function App() {
 
   return (
     <>
-      <DateNow />
-      <AddItemForm addItemToList={AddItemToList} />
-      <ItemList items={items} />
+      <div className="container d-flex justify-content-center p-5 flex-column w-50 bg-light">
+        <DateNow />
+        <AddItemForm addItemToList={AddItemToList} />
+        <ItemList items={items} />
+      </div>
     </>
   );
 }

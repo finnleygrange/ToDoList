@@ -84,13 +84,13 @@ function DateNow() {
 
   return (
     <>
-      <div className="header-left">
-        <div>
-          <span className="today">{today}</span>
-          <span className="month">{monthStr}</span>
-          <span className="year">{year}</span>
+      <div className="d-flex w-100">
+        <div className="flex-grow-1">
+          <span className="today">{today} </span>
+          <span className="month">{monthStr} </span>
+          <span className="year">{year} </span>
         </div>
-        <div className="header-right">
+        <div>
           <span className="day">{dayStr}</span>
         </div>
       </div>
