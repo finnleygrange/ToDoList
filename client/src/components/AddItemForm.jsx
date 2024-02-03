@@ -21,7 +21,7 @@ function AddItemForm({ addItemToList }) {
 
   return (
     <>
-      <form className="add-item-form input-group mt-5" onSubmit={addItem}>
+      <form className="add-item-form input-group mt-4" onSubmit={addItem}>
         <input
           className="form-control"
           type="text"

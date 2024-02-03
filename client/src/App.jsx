@@ -29,7 +29,7 @@ function App() {
 
   return (
     <>
-      <div className="container d-flex justify-content-center p-5 flex-column w-50 bg-light">
+      <div className="container d-flex justify-content-center p-5 flex-column w-50 bg-light border">
         <DateNow />
         <AddItemForm addItemToList={AddItemToList} />
         <ItemList items={items} removeItem={RemoveItemFromList} />
