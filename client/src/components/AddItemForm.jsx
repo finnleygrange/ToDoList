@@ -6,6 +6,10 @@ function AddItemForm({ addItemToList }) {
   function addItem(event) {
     event.preventDefault();
 
+    if (item == "") {
+      return;
+    }
+
     addItemToList(item);
 
     setItem("");
