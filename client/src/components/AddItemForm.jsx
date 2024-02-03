@@ -1,26 +1,26 @@
 import { useState } from "react";
 
-function AddItemForm() {
-  const [itemName, setItemName] = useState("");
+function AddItemForm({ addItemToList }) {
+  const [item, setItem] = useState("");
 
   function addItem(event) {
     event.preventDefault();
 
-    console.log(itemName);
+    addItemToList(item);
 
-    setItemName("");
+    setItem("");
   }
 
   function handleInputChange(event) {
-    setItemName(event.target.value);
+    setItem(event.target.value);
   }
 
   return (
     <>
-      <form className="" onSubmit={addItem}>
+      <form onSubmit={addItem}>
         <input
           type="text"
-          value={itemName}
+          value={item}
           onChange={handleInputChange}
           placeholder="Add new item"
         />
