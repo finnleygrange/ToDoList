@@ -2,6 +2,7 @@ import DateNow from "./components/DateNow";
 import AddItemForm from "./components/AddItemForm";
 import { useEffect, useState } from "react";
 import ItemList from "./components/ItemList";
+import "bootstrap/dist/css/bootstrap.css";
 
 function App() {
   const [items, setItems] = useState([]);
