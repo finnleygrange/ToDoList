@@ -12,13 +12,17 @@
 }
 
 .user-input.dark-theme::placeholder {
-  color: $light;
+  color: darken($color: $light, $amount: 50%);
 }
 
 .user-input.light-theme::placeholder {
-  color: $dark;
+  color: lighten($color: $dark, $amount: 50%);
 }
 
 .btn {
   transition: none !important;
+}
+
+.plus {
+  color: green;
 }

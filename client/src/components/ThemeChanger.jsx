@@ -1,3 +1,5 @@
+import "./themeChanger.scss";
+
 function ThemeChanger({ toggleTheme, isDarkTheme }) {
   function HandleToggleTheme() {
     toggleTheme();
@@ -12,9 +14,9 @@ function ThemeChanger({ toggleTheme, isDarkTheme }) {
           onClick={HandleToggleTheme}
         >
           {isDarkTheme ? (
-            <i class="fa-solid fa-moon" />
+            <i className="moon fa-solid fa-moon" />
           ) : (
-            <i class="fa-solid fa-sun" />
+            <i className="sun fa-solid fa-sun" />
           )}
         </button>
       </div>

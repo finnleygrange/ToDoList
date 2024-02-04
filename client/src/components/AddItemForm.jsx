@@ -22,7 +22,7 @@ function AddItemForm({ addItemToList, isDarkTheme }) {
 
   return (
     <>
-      <form className="add-item-form input-group mt-4" onSubmit={addItem}>
+      <form className="add-item-form input-group mt-2" onSubmit={addItem}>
         <input
           className={`user-input form-control ${
             isDarkTheme ? "dark-theme" : "light-theme"
@@ -34,11 +34,11 @@ function AddItemForm({ addItemToList, isDarkTheme }) {
         />
         <button
           className={`btn ms-2 border ${
-            isDarkTheme ? " btn-dark" : "btn-light"
+            isDarkTheme ? "btn-dark" : "btn-light"
           }`}
           type="submit"
         >
-          <i className="fa-solid fa-plus"></i>
+          <i className="plus fa-solid fa-plus"></i>
         </button>
       </form>
     </>
