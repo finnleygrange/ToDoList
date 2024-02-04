@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import ItemList from "./components/ItemList";
 import "bootstrap/dist/css/bootstrap.css";
 import ThemeChanger from "./components/ThemeChanger";
+import "./app.scss";
 
 function App() {
   const [items, setItems] = useState([]);
@@ -41,24 +42,34 @@ function App() {
   return (
     <>
       <div
-        className={`app container-fluid d-flex align-items-center vh-100
+        className={`app 
         ${isDarkTheme ? "bg-dark text-light" : "bg-light"}`}
       >
-        <div className="container d-flex justify-content-center p-5 flex-column w-50">
-          <DateNow />
+        <div className="container-fluid d-flex align-items-center justify-content-center flex-column vh-100 w-50">
+          <div
+            className={`decor container w-100 ${
+              isDarkTheme ? "dark" : "light"
+            }`}
+          ></div>
+          <div
+            className={`to-do-list container d-flex justify-content-center p-5 flex-column w-100 
+          ${isDarkTheme ? "dark" : "light"}`}
+          >
+            <DateNow />
 
-          <ThemeChanger toggleTheme={toggleTheme} isDarkTheme={isDarkTheme} />
+            <ThemeChanger toggleTheme={toggleTheme} isDarkTheme={isDarkTheme} />
 
-          <AddItemForm
-            addItemToList={AddItemToList}
-            isDarkTheme={isDarkTheme}
-          />
+            <AddItemForm
+              addItemToList={AddItemToList}
+              isDarkTheme={isDarkTheme}
+            />
 
-          <ItemList
-            items={items}
-            removeItem={RemoveItemFromList}
-            isDarkTheme={isDarkTheme}
-          />
+            <ItemList
+              items={items}
+              removeItem={RemoveItemFromList}
+              isDarkTheme={isDarkTheme}
+            />
+          </div>
         </div>
       </div>
     </>

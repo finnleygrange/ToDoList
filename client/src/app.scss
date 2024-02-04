@@ -1,0 +1,35 @@
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+.app {
+  min-width: 960px;
+  height: 100vh;
+}
+
+.to-do-list {
+  border-radius: 1rem;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.to-do-list.dark {
+  background-color: darken($color: $dark, $amount: 5%);
+}
+
+.to-do-list.light {
+  background-color: darken($color: $light, $amount: 5%);
+}
+
+.decor {
+  height: 3rem;
+  width: 50%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.decor.light {
+  background-color: rgb(255, 188, 44);
+}
+
+.decor.dark {
+  background-color: rgb(48, 114, 201);
+}
