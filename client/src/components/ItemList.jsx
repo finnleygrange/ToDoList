@@ -1,3 +1,5 @@
+import "./itemList.scss";
+
 function ItemList({ items, removeItem, isDarkTheme }) {
   function handleRemoveItem(index) {
     removeItem(index);
@@ -9,8 +11,8 @@ function ItemList({ items, removeItem, isDarkTheme }) {
         {items.map((item, index) => (
           <li
             key={index}
-            className={`list-group-item d-flex align-items-center w-100 ${
-              isDarkTheme ? "bg-dark text-light" : "bg-light text-dark"
+            className={`item list-group-item d-flex align-items-center w-100 ${
+              isDarkTheme ? "dark-theme" : "light-theme"
             }`}
           >
             <div className="flex-grow-1 overflow-x-auto">{item}</div>

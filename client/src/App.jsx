@@ -47,11 +47,6 @@ function App() {
       >
         <div className="container-fluid d-flex align-items-center justify-content-center flex-column vh-100 w-50">
           <div
-            className={`decor container w-100 ${
-              isDarkTheme ? "dark" : "light"
-            }`}
-          ></div>
-          <div
             className={`to-do-list container d-flex justify-content-center p-5 flex-column w-100 
           ${isDarkTheme ? "dark" : "light"}`}
           >

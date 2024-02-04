@@ -27,25 +27,25 @@ function DateNow() {
   function DayToString(day) {
     switch (day) {
       case 0:
-        return "Monday";
+        return "Sunday";
         break;
       case 1:
-        return "Tuesday";
+        return "Monday";
         break;
       case 2:
-        return "Wednesday";
+        return "Tuesday";
         break;
       case 3:
-        return "Thursday";
+        return "Wednesday";
         break;
       case 4:
-        return "Friday";
+        return "Thursday";
         break;
       case 5:
-        return "Saturday";
+        return "Friday";
         break;
       case 6:
-        return "Sunday";
+        return "Saturday";
         break;
 
       default:

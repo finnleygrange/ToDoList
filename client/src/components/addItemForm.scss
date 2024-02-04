@@ -3,12 +3,8 @@
 .user-input.dark-theme,
 .user-input.dark-theme:focus,
 .user-input.dark-theme:active {
-  background-color: $dark !important;
+  background-color: lighten($color: $dark, $amount: 10%);
   color: $light;
-}
-
-.user-input.light-theme {
-  background-color: $light;
 }
 
 .user-input.dark-theme::placeholder {
@@ -21,6 +17,14 @@
 
 .btn {
   transition: none !important;
+}
+
+.add-item-btn.dark-theme {
+  background-color: lighten($color: $dark, $amount: 10%) !important;
+}
+
+.add-item-btn.light-theme {
+  background-color: $white;
 }
 
 .plus {

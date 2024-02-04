@@ -5,5 +5,13 @@
 }
 
 .sun {
-  color: rgb(255, 188, 44);
+  color: rgb(255, 174, 67);
+}
+
+.theme-changer.dark-theme {
+  background-color: lighten($color: $dark, $amount: 10%);
+}
+
+.theme-changer.light-theme {
+  background-color: $white;
 }

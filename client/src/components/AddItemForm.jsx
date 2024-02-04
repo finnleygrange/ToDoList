@@ -33,8 +33,8 @@ function AddItemForm({ addItemToList, isDarkTheme }) {
           placeholder="Add new item"
         />
         <button
-          className={`btn ms-2 border ${
-            isDarkTheme ? "btn-dark" : "btn-light"
+          className={`add-item-btn btn ms-2 border ${
+            isDarkTheme ? "dark-theme" : "light-theme"
           }`}
           type="submit"
         >

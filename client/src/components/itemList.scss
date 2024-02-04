@@ -1,0 +1,6 @@
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+.item.dark-theme {
+  background-color: lighten($color: $dark, $amount: 10%);
+  color: $light;
+}
