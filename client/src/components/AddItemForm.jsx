@@ -1,6 +1,7 @@
 import { useState } from "react";
+import "./addItemForm.scss";
 
-function AddItemForm({ addItemToList }) {
+function AddItemForm({ addItemToList, isDarkTheme }) {
   const [item, setItem] = useState("");
 
   function addItem(event) {
@@ -23,13 +24,20 @@ function AddItemForm({ addItemToList }) {
     <>
       <form className="add-item-form input-group mt-4" onSubmit={addItem}>
         <input
-          className="form-control"
+          className={`user-input form-control ${
+            isDarkTheme ? "dark-theme" : "light-theme"
+          }`}
           type="text"
           value={item}
           onChange={handleInputChange}
           placeholder="Add new item"
         />
-        <button className="btn btn-outline-primary" type="submit">
+        <button
+          className={`btn ms-2 border ${
+            isDarkTheme ? " btn-dark" : "btn-light"
+          }`}
+          type="submit"
+        >
           <i className="fa-solid fa-plus"></i>
         </button>
       </form>

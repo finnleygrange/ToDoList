@@ -1,0 +1,24 @@
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+.user-input.dark-theme,
+.user-input.dark-theme:focus,
+.user-input.dark-theme:active {
+  background-color: $dark !important;
+  color: $light;
+}
+
+.user-input.light-theme {
+  background-color: $light;
+}
+
+.user-input.dark-theme::placeholder {
+  color: $light;
+}
+
+.user-input.light-theme::placeholder {
+  color: $dark;
+}
+
+.btn {
+  transition: none !important;
+}

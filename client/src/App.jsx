@@ -3,9 +3,11 @@ import AddItemForm from "./components/AddItemForm";
 import { useEffect, useState } from "react";
 import ItemList from "./components/ItemList";
 import "bootstrap/dist/css/bootstrap.css";
+import ThemeChanger from "./components/ThemeChanger";
 
 function App() {
   const [items, setItems] = useState([]);
+  const [isDarkTheme, setIsDarkTheme] = useState(false);
 
   useEffect(() => {
     const storedItems = JSON.parse(localStorage.getItem("items"));
@@ -27,12 +29,32 @@ function App() {
     localStorage.setItem("items", JSON.stringify(updatedItems));
   }
 
+  function toggleTheme() {
+    setIsDarkTheme((prevTheme) => !prevTheme);
+  }
+
   return (
     <>
-      <div className="container d-flex justify-content-center p-5 flex-column w-50 bg-light border">
-        <DateNow />
-        <AddItemForm addItemToList={AddItemToList} />
-        <ItemList items={items} removeItem={RemoveItemFromList} />
+      <div
+        className={`app container-fluid d-flex align-items-center vh-100
+        ${isDarkTheme ? "bg-dark text-light" : "bg-light"}`}
+      >
+        <div className="container d-flex justify-content-center p-5 flex-column w-50">
+          <DateNow />
+
+          <ThemeChanger toggleTheme={toggleTheme} isDarkTheme={isDarkTheme} />
+
+          <AddItemForm
+            addItemToList={AddItemToList}
+            isDarkTheme={isDarkTheme}
+          />
+
+          <ItemList
+            items={items}
+            removeItem={RemoveItemFromList}
+            isDarkTheme={isDarkTheme}
+          />
+        </div>
       </div>
     </>
   );
