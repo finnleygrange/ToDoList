@@ -1,5 +1,21 @@
+import React, { useState, useEffect } from "react";
+
 function DateNow() {
+  const [currentDate, setCurrentDate] = useState(new Date());
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentDate(new Date());
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   const now = new Date();
+  const time = now.toLocaleTimeString([], {
+    hour: "2-digit",
+    minute: "2-digit",
+  });
   const today = now.getDate();
   const day = now.getDay();
   const month = now.getMonth();
@@ -84,16 +100,19 @@ function DateNow() {
 
   return (
     <>
-      <div className="d-flex w-100 align-items-center">
-        <div className="flex-grow-1 d-flex">
-          <span className="today fs-1 fw-bold">{today} </span>
+      <div className="d-flex w-100 align-items-center justify-content-between">
+        <div className="d-flex">
+          <span className="fs-1 fw-bold">{today} </span>
           <div className="d-flex flex-column lh-1 justify-content-center">
-            <span className="month fs-6 fw-bolder">{monthStr} </span>
-            <span className="year fs-6">{year} </span>
+            <span className="fs-6 fw-bolder">{monthStr} </span>
+            <span className="fs-6">{year} </span>
           </div>
         </div>
+        <div className="">
+          <span className="time fs-6">{time}</span>
+        </div>
         <div>
-          <span className="day">{dayStr}</span>
+          <span className="fs-6">{dayStr}</span>
         </div>
       </div>
     </>
