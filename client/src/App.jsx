@@ -14,6 +14,9 @@ function App() {
     if (storedItems) {
       setItems(storedItems);
     }
+
+    const savedTheme = localStorage.getItem("theme");
+    setIsDarkTheme(savedTheme === "dark");
   }, []);
 
   function AddItemToList(newItem) {
@@ -30,7 +33,9 @@ function App() {
   }
 
   function toggleTheme() {
-    setIsDarkTheme((prevTheme) => !prevTheme);
+    const newTheme = !isDarkTheme;
+    setIsDarkTheme(newTheme);
+    localStorage.setItem("theme", newTheme ? "dark" : "light");
   }
 
   return (
