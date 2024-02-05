@@ -22,7 +22,7 @@ This project is a simple To-Do List application where I explore Bootstrap and Re
     cd ToDoList/client
    ```
 3. **Install dependencies:**
-4. ```bash
+   ```bash
     npm install
    ```
 5. **Start the development server:**
