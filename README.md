@@ -26,10 +26,10 @@ This project is a simple To-Do List application where I explore Bootstrap and Re
     npm install
    ```
 5. **Start the development server:**
-6. ```bash
+   ```bash
     npm run dev
    ```
-7. Once the server is running, open your web browser and go to **`http://localhost:3000`** to view the application.
+6. Once the server is running, open your web browser and go to **`http://localhost:3000`** to view the application.
 
 ## Contributing
 If you would like to contribute to this To-Do List project please fork the repository and submit pull requests.
