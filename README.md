@@ -1,6 +1,6 @@
 # To-Do List
 
-![Image of To-Do List](screenshot.PNG)
+![Image of To-Do List](/assets/screenshot.PNG)
 
 This project is a simple To-Do List application where I explore Bootstrap and React. As part of my journey as a software engineer, I've used React's component-based architecture and Bootstrap's design elements to create a user-friendly task manager. 
 
