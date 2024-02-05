@@ -1,6 +1,6 @@
 # To-Do List
 
-![Image of To-Do List](ToDoList.PNG)
+![Image of To-Do List](screenshot.PNG)
 
 This project is a simple To-Do List application where I explore Bootstrap and React. As part of my journey as a software engineer, I've used React's component-based architecture and Bootstrap's design elements to create a user-friendly task manager. 
 
@@ -19,7 +19,7 @@ This project is a simple To-Do List application where I explore Bootstrap and Re
    ```
 2. **Navigate to the project directory:**
    ```bash
-    cd ToDoList/client
+    cd ToDoList
    ```
 3. **Install dependencies:**
    ```bash
