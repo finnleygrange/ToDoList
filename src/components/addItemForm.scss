@@ -7,12 +7,20 @@
   color: $light;
 }
 
+.user-input {
+  transition: none !important;
+}
+
 .user-input.dark-theme::placeholder {
   color: darken($color: $light, $amount: 50%);
 }
 
 .user-input.light-theme::placeholder {
   color: lighten($color: $dark, $amount: 50%);
+}
+
+.btn {
+  transition: none !important;
 }
 
 .btn.dark-theme:hover {
