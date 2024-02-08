@@ -100,7 +100,7 @@ function DateNow() {
 
   return (
     <>
-      <div className="d-flex w-100 align-items-center justify-content-between">
+      <div className="date d-flex w-100 align-items-center justify-content-between">
         <div className="d-flex">
           <span className="fs-1 fw-bold">{today} </span>
           <div className="d-flex flex-column lh-1 justify-content-center">
@@ -108,7 +108,7 @@ function DateNow() {
             <span className="fs-6">{year} </span>
           </div>
         </div>
-        <div className="">
+        <div>
           <span className="time fs-6">{time}</span>
         </div>
         <div>

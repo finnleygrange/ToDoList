@@ -7,12 +7,10 @@ function ThemeChanger({ toggleTheme, isDarkTheme }) {
 
   return (
     <>
-      <div className="mt-2 d-flex justify-content-end">
+      <div className="theme-changer mt-2 d-flex justify-content-end">
         <button
           type="button"
-          className={`theme-changer btn border ${
-            isDarkTheme ? "dark-theme" : "light-theme"
-          }`}
+          className={`btn border ${isDarkTheme ? "dark-theme" : "light-theme"}`}
           onClick={HandleToggleTheme}
         >
           {isDarkTheme ? (

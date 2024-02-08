@@ -8,10 +8,10 @@
   color: rgb(255, 174, 67);
 }
 
-.theme-changer.dark-theme {
+.theme-changer .btn.dark-theme {
   background-color: lighten($color: $dark, $amount: 10%);
 }
 
-.theme-changer.light-theme {
+.theme-changer .btn.light-theme {
   background-color: $white;
 }

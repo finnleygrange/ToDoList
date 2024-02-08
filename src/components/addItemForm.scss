@@ -15,12 +15,16 @@
   color: lighten($color: $dark, $amount: 50%);
 }
 
-.btn {
-  transition: none !important;
+.btn.dark-theme:hover {
+  background-color: lighten($color: $dark, $amount: 15%) !important;
+}
+
+.btn.light-theme:hover {
+  background-color: darken($color: $light, $amount: 5%) !important;
 }
 
 .add-item-btn.dark-theme {
-  background-color: lighten($color: $dark, $amount: 10%) !important;
+  background-color: lighten($color: $dark, $amount: 10%);
 }
 
 .add-item-btn.light-theme {

@@ -10,6 +10,11 @@ function App() {
   const [items, setItems] = useState([]);
   const [isDarkTheme, setIsDarkTheme] = useState(false);
 
+  document.documentElement.setAttribute(
+    "data-bs-theme",
+    isDarkTheme ? "dark" : "light"
+  );
+
   useEffect(() => {
     const storedItems = JSON.parse(localStorage.getItem("items"));
     if (storedItems) {
@@ -41,10 +46,7 @@ function App() {
 
   return (
     <>
-      <div
-        className={`app 
-        ${isDarkTheme ? "bg-dark text-light" : "bg-light"}`}
-      >
+      <div className={`${isDarkTheme ? "bg-dark text-light" : "bg-light"}`}>
         <div className="app container-fluid d-flex align-items-center justify-content-center flex-column vh-100 w-50">
           <div
             className={`to-do-list container d-flex justify-content-center p-5 flex-column w-100 
